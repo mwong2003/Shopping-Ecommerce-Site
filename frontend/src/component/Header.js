@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import logo from '../assest/logo.png'
 import { Link } from 'react-router-dom'
 import {HiOutlineUserCircle} from 'react-icons/hi'
-import {BsFillCartFill} from 'react-icons/bs'
+import {BsCartFill} from 'react-icons/bs'
 import { useDispatch, useSelector } from 'react-redux'
 import { logoutRedux } from '../redux/userSlice'
 import { toast } from 'react-hot-toast'
@@ -36,15 +36,17 @@ const Header = () => {
                 <div className='flex items-center gap-4 md:gap-7'>
                     <nav className='gap-4 md:gap-7 text-base md:text-lg hidden md:flex'>
                         <Link to={""}>Home</Link>
-                        <Link to={"menu"}>Menu</Link>
+                        <Link to={"menu/645e7b3c6fea2623dd702936"}>Menu</Link>
                         <Link to={"about"}>About</Link>
                         <Link to={"contact"}>Contact</Link>
                     </nav>
                     <div className='text-2xl text-slate-600 relative'>
-                        <BsFillCartFill/>
-                        <div className='absolute -top-1 -right-1 text-white bg-red-500 h-4 w-4 rounded-full m-0 p-0 text-sm text-center'>
-                            0
-                        </div>
+                        <Link to={"cart"}>
+                            <BsCartFill/>
+                            <div className='absolute -top-1 -right-1 text-white bg-red-500 h-4 w-4 rounded-full m-0 p-0 text-sm text-center'>
+                                0
+                            </div>
+                        </Link>
                     </div>
                     
                     <div className='text-slate-600' onClick={handleShowMenu}>
