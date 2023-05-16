@@ -9,11 +9,12 @@ export const productSlice = createSlice({
     initialState,
     reducers: {
         setDataProduct: (state, action) => {
-            console.log(action)
             state.productList = [...action.payload]
         },
         addCartItem: (state, action) => {
             console.log(action)
+            const total = action.payload.price
+            state.cartItem = [...state.cartItem, {...action.payload, qty: 1, total: total}]
         },
         deleteCartItem: (state, action) => {
 
