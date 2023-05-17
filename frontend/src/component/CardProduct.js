@@ -29,7 +29,7 @@ const CardProduct = ({id, name, image, category, qty, total, price}) => {
             </div>
             <div className='flex items-center gap-2 font-bold text-slate-700'>
               <p>Total:</p>
-              <p>{total}</p>
+              <p>${total}</p>
             </div>
           </div>
         </div>
